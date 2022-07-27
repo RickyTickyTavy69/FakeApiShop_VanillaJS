@@ -11,6 +11,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  color: #323a45;
 }
 
 /**********************header**************************/
@@ -27,6 +28,13 @@ nav {
 nav .logo {
   font-size: 1.4em;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav .logo:hover {
+  color: #848484;
+  transition: 0.2s;
 }
 
 nav ul {
@@ -39,11 +47,46 @@ nav ul {
   font-weight: 800;
 }
 
+nav ul li {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  transition: 0.3s;
+  color: #848484;
+}
+
 nav ul li:last-child {
   text-transform: uppercase;
 }
 
 /**********************main**************************/
+
+.product_img_container {
+  background-color: #f7f7f7;
+  transition: 0.3s;
+  margin-bottom: 3vh;
+}
+
+.products .product_img_container {
+  background-color: #eeeeee;
+}
+
+article {
+  cursor: pointer;
+}
+
+article img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+article:hover img {
+  opacity: 0.2;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
 /***backpack***/
 
@@ -62,6 +105,9 @@ nav ul li:last-child {
 
 .name p:first-child {
   font-weight: 700;
+}
+.name p:nth-child(2) {
+  color: #848484;
 }
 
 .price {
@@ -97,3 +143,61 @@ nav ul li:last-child {
 }
 
 /****************footer****************************/
+
+.footerBar {
+  margin-top: 8vh;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.footerBar div {
+  width: 100%;
+}
+
+.footerBar div:first-child {
+  margin-right: 6%;
+  width: 110%;
+}
+
+.footerBar div:nth-child(2) {
+  width: 50%;
+}
+
+.footerBar div:nth-child(3) {
+  margin-right: 2%;
+}
+
+.footerBar h2 {
+  font-size: 1.2em;
+  margin-bottom: 4vh;
+}
+
+.footerBar p {
+  margin-bottom: 1vh;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.footerBar div a {
+  color: #323a45;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.copyright {
+  display: flex;
+  font-size: 1.6em;
+  align-items: center;
+  gap: 1%;
+  margin-top: 4vh;
+  color: #848484;
+}
+
+.copyright span {
+  font-size: 0.6em;
+}
