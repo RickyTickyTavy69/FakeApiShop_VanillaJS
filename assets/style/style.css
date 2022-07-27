@@ -220,9 +220,11 @@ strong {
 }
 
 .cheeseburger .button_menu {
+  cursor: pointer;
   display: none;
   flex-direction: column;
   gap: 5px;
+  padding: 1%;
 }
 
 .cheeseburger .button_menu .button_line {
