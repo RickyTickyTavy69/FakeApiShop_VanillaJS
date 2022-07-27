@@ -107,3 +107,61 @@ lampSection.addEventListener("click", (event) => {
     }
   }
 });
+
+const magazinSection = document.querySelector(".magazinSection");
+
+magazinSection.addEventListener("click", (event) => {
+  if (event.target.classList.contains("Link")) {
+    const linkNumber = String(event.target.classList)[
+      String(event.target.classList).length - 1
+    ];
+    switch (linkNumber) {
+      case "1":
+        window.location.href = "https://amzn.to/2Ij1IKA";
+        break;
+      case "2":
+        window.location.href = "https://amzn.to/2UxtLww";
+        break;
+      case "3":
+        window.location.href = "https://amzn.to/2I5vxiq";
+        break;
+      case "4":
+        window.location.href =
+          "https://goodfuckingdesignadvice.com/products/classic-advice-print";
+        break;
+      case "5":
+        window.location.href = "https://amzn.to/2D3yZWX";
+        break;
+      case "6":
+        window.location.href = "https://amzn.to/2WTbsPL";
+        break;
+      case "7":
+        window.location.href = "https://amzn.to/2GbCf4A";
+        break;
+    }
+  }
+});
+
+const bottleSection = document.querySelector(".bottlesSection");
+
+bottleSection.addEventListener("click", (event) => {
+  if (event.target.classList.contains("Link")) {
+    const linkNumber = String(event.target.classList)[
+      String(event.target.classList).length - 1
+    ];
+    switch (linkNumber) {
+      case "1":
+        window.location.href = "https://amzn.to/2WMJbdy";
+        break;
+      case "2":
+        window.location.href = "https://amzn.to/2JLtxvk";
+        break;
+      case "3":
+        window.location.href = "https://amzn.to/2YdSBPy";
+        break;
+      case "4":
+        window.location.href = "https://amzn.to/2LCEfGP";
+        break;
+    }
+  }
+});
