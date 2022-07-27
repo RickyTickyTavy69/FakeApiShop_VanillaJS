@@ -205,6 +205,79 @@ strong {
   font-style: italic;
 }
 
+/******************************burgermenu****************************/
+.cheeseburger {
+  display: none;
+  position: relative;
+}
+
+.cheeseburger .button_menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cheeseburger .button_menu .button_line {
+  width: 40px;
+  height: 5px;
+  background-color: rgb(220, 24, 145);
+}
+
+.cheeseburger .button_menu .button_line:before {
+  top: -10px;
+  display: block;
+  content: "";
+  width: 40px;
+  height: 5px;
+  background-color: rgb(220, 24, 145);
+  position: absolute;
+}
+
+.cheeseburger .button_menu .button_line:after {
+  top: 10px;
+  display: block;
+  content: "";
+  width: 40px;
+  height: 5px;
+  background-color: rgb(220, 24, 145);
+  position: absolute;
+}
+
+.cheeseburger ul {
+  transition: 0.3s;
+  display: none;
+  flex-direction: column;
+}
+
+.cheeseburger ul.active {
+  transition: 0.3s;
+  position: absolute;
+  left: -150px;
+  top: -20px;
+  font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+}
+
+.button_menu .button_line {
+  transform: scale(1) translate(0px, -50%);
+}
+
+.button_menu.active .button_line:before {
+  top: 210%;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+
+.button_menu.active .button_line:after {
+  bottom: 210%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
+
+.button_menu.active .button_line {
+  background-color: transparent;
+}
+
 /************************@media-query****************************************************/
 
 @media (max-width: 1200px) {
@@ -231,6 +304,18 @@ strong {
   body {
     max-width: 576px;
     font-size: 0.6em;
+  }
+  .pc_navigation {
+    display: none;
+  }
+
+  .cheeseburger {
+    display: block;
+  }
+  .cheeseburger .button_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }
 
