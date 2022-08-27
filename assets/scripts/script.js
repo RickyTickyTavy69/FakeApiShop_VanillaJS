@@ -1,8 +1,8 @@
 /*****************************links ohne a tags xd */
 
-const backpackSection = document.querySelector(".backpackSection");
+/****************************************States***************************************/
 
-backpackSection.addEventListener("click", (event) => {
+/*backpackSection.addEventListener("click", (event) => {
   if (event.target.classList.contains("Link")) {
     const linkNumber = String(event.target.classList)[
       String(event.target.classList).length - 1
@@ -34,7 +34,7 @@ backpackSection.addEventListener("click", (event) => {
   }
 });
 
-const bookSection = document.querySelector(".bookSection");
+/*const bookSection = document.querySelector(".bookSection");
 
 bookSection.addEventListener("click", (event) => {
   if (event.target.classList.contains("Link")) {
@@ -158,7 +158,7 @@ bottleSection.addEventListener("click", (event) => {
         break;
     }
   }
-});
+});*/
 
 /*******************ja is bissl zu lange aber dafür ohne die a Tags */
 
@@ -171,3 +171,80 @@ cheeseburgerButton.addEventListener("click", () => {
   menu.classList.toggle("active");
   cheeseburgerButton.classList.toggle("active");
 });
+
+
+/********************************************API_Request*************************************/
+
+
+const getData = async () => {
+  const response = await fetch("https://fakestoreapi.com/products");
+  const data = await response.json();
+  console.log("data", data);
+
+  let dataHTML = data.map((hamburger, pommes) => {
+
+      if(pommes === 0 || pommes === 7 || pommes === 14) {
+
+          return `<article class="product_container main_container">
+                     <p class="hover_image">See this fake product</p>
+                     <img
+                        class="product_img"
+                        src="${hamburger.image}"
+                        alt="backPack"
+                     />
+                     <div class="price_name">
+                        <p class="title">Fake ${hamburger.title}</p>
+                        <p class="price">${hamburger.price}€</p>
+                     </div>
+                   </article>`
+
+      } else{
+          return`
+          <article class="product_container small_container">
+                    <p class="hover_image">See this fake product</p>
+                     <img
+                        class="product_img"
+                        src= "${hamburger.image}"
+                        alt="backPack"
+                     />
+                     <div class="price_name">
+                        <p class="title">Fake ${hamburger.title}</p>
+                        <p class="price">${hamburger.price} €</p>
+                     </div>
+          </article>`}
+  })
+
+    console.log("dataHTML", dataHTML);
+    const main = document.querySelector(".main");
+    main.innerHTML = dataHTML.join("")
+
+    /*********************************************Add Links to the Products***************************/
+
+
+    const images = document.querySelectorAll(".product_img")
+    console.log("images", images);
+
+    images.forEach((ketchup) => {
+        ketchup.addEventListener("click", (event) => {
+            console.log("click on img");
+        })
+    })
+
+    images.forEach( (mayo) => {
+        mayo.addEventListener( "mouseover", (event) => {
+            event.target.parentElement.children[0].classList.add("active");
+            console.log("children", event.target.parentElement.children);
+        })
+
+        mayo.addEventListener( "mouseout", (event) => {
+            event.target.parentElement.children[0].classList.remove("active");
+            console.log("children", event.target.parentElement.children);
+        })
+    })
+}
+
+getData();
+
+
+
+/************************************************Links_Redirect****************************************/
