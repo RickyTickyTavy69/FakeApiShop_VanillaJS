@@ -24,6 +24,7 @@ const getData = async () => {
 
           return `<article class="product_container main_container">
                      <p class="hover_image">See this fake product</p>
+                     <a href="./assets/pages/product.html?${pommes}">go to html</a>
                      <img
                         class="product_img"
                         src="${hamburger.image}"
@@ -40,6 +41,7 @@ const getData = async () => {
           return`
           <article class="product_container small_container">
                     <p class="hover_image">See this fake product</p>
+                    <a href="./assets/pages/product.html?${pommes}">go to html</a>
                      <img
                         class="product_img"
                         src= "${hamburger.image}"
