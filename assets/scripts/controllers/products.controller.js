@@ -68,11 +68,25 @@ export default class ProductsController{
                         <p class="price">${data.price}€</p>
                      </div>
                      <div class="product_buttons">
-                        <button>was ist das</button>
-                        <button>kaufen</button>
+                        <button class="info">was ist das</button>
+                        <button class="buy">kaufen</button>
                      </div>
                       <div class="button_container">
                         <button class="back">zurück zum shop</button>
+                      </div>
+                      <div class="info_block">
+                        <p>
+                        Unglaublich!!! Das ist unserer neuer ${data.title} von bester Qualität!
+                        Wunderschön und einzigartig, für Sie extra für nur ${data.price} €.
+                        Greifen Sie jetzt zu, Das Angebot ist limitiert! 
+                        </p>
+                      </div>
+                      <div class="buy_block">
+                        <p>
+                        Unglaublich!!! Unserer neuer ${data.title} von bester Qualität ist 
+                        leider ausverkauft! Wunderschön und einzigartig, aber nicht mehr da :(...
+                        Hätten Sie früher zugreifen müssen, tja...
+                        </p>
                       </div>
                    </article>`
 
