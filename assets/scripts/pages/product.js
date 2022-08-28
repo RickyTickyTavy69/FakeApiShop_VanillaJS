@@ -12,7 +12,9 @@ const getData = async () => {
     const backButton = document.querySelector(".back");
 
     backButton.addEventListener("click", () => {
-        location.replace(`/The_design_shop/index.html`);
+        let host = location.host.split(":")[0];
+        let url = (host === "localhost")? `/The_design_shop/index.html`: `/Fake_API_SHOP`; // der Script soll unterscheiden ob ich auf dem localhost oder pages bin.
+        location.replace(url);
     })
 }
 
